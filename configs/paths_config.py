@@ -14,8 +14,8 @@ dataset_paths = {
 	'afhq_wild_train': '',
 	'afhq_wild_test': '',
 
-	'twdnev3': '',
-	'twdnev3_test': ''
+	'twdnev3': '/content/data/train',
+	'twdnev3_test': '/content/data/test'
 }
 
 model_paths = {
@@ -27,7 +27,7 @@ model_paths = {
 	'stylegan_horse': 'pretrained_models/stylegan2-horse-config-f.pt',
 	'stylegan_ada_wild': 'pretrained_models/afhqwild.pt',
 	'stylegan_toonify': 'pretrained_models/ffhq_cartoon_blended.pt',
-	'stylegan_twdnev3': 'pretrained_models/twdnev3.pt',
+	'stylegan_twdnev3': 'pretrained_models/twdne3_ckpt.pt',
 	'shape_predictor': 'pretrained_models/shape_predictor_68_face_landmarks.dat',
 	'circular_face': 'pretrained_models/CurricularFace_Backbone.pth',
 	'mtcnn_pnet': 'pretrained_models/mtcnn/pnet.npy',
