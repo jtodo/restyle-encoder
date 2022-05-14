@@ -37,7 +37,7 @@ class BackboneEncoder(Module):
         self.styles = nn.ModuleList()
         self.style_count = n_styles
         for i in range(self.style_count):
-            style = GradualStyleBlock(512, 1024, 16)
+            style = GradualStyleBlock(256, 1024, 8)
             self.styles.append(style)
 
     def forward(self, x):

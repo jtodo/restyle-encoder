@@ -12,11 +12,11 @@ class GradualStyleBlock(Module):
         self.spatial = spatial
         num_pools = int(np.log2(spatial))
         modules = []
-        modules += [Conv2d(in_c, out_c, kernel_size=3, stride=32, padding=1),
+        modules += [Conv2d(in_c, out_c, kernel_size=3, stride=4, padding=1),
                     nn.LeakyReLU()]
         for i in range(num_pools - 1):
             modules += [
-                Conv2d(out_c, out_c, kernel_size=3, stride=32, padding=1),
+                Conv2d(out_c, out_c, kernel_size=3, stride=4, padding=1),
                 nn.LeakyReLU()
             ]
         self.convs = nn.Sequential(*modules)
