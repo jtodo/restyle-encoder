@@ -501,7 +501,7 @@ class Coach:
 			return loss_dict
 
 	def sample_real_and_fake_latents(self, x):
-		sample_z = torch.randn(self.opts.batch_size, 512, device=self.device)
+		sample_z = torch.randn(self.opts.batch_size, 1024, device=self.device)
 		real_w = self.net.decoder.get_latent(sample_z)
 		fake_w = self.net.encoder(x)
 		if self.is_progressive_training():  # When progressive training, feed only unique w's
