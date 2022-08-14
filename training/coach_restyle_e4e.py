@@ -64,7 +64,7 @@ class Coach:
 
 		# Initialize discriminator
 		if self.opts.w_discriminator_lambda > 0:
-			self.discriminator = LatentCodesDiscriminator(512, 4).to(self.device)
+			self.discriminator = LatentCodesDiscriminator(1024, 4).to(self.device)
 			self.discriminator_optimizer = torch.optim.Adam(list(self.discriminator.parameters()), lr=opts.w_discriminator_lr)
 			self.real_w_pool = LatentCodesPool(self.opts.w_pool_size)
 			self.fake_w_pool = LatentCodesPool(self.opts.w_pool_size)
