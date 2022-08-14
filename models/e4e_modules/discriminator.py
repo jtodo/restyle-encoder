@@ -13,7 +13,7 @@ class LatentCodesDiscriminator(nn.Module):
                 nn.Linear(style_dim, style_dim)
             )
             layers.append(nn.LeakyReLU(0.2))
-        layers.append(nn.Linear(512, 1))
+        layers.append(nn.Linear(1024, 1))
         self.mlp = nn.Sequential(*layers)
 
     def forward(self, w):
