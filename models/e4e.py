@@ -19,7 +19,7 @@ class e4e(nn.Module):
         self.n_styles = int(math.log(self.opts.output_size, 2)) * 2 - 2
         # Define architecture
         self.encoder = self.set_encoder()
-        self.decoder = Generator(self.opts.output_size, 512, 8, channel_multiplier=2)
+        self.decoder = Generator(self.opts.output_size, 1024, 4, channel_multiplier=2)
         self.face_pool = torch.nn.AdaptiveAvgPool2d((256, 256))
         # Load weights if needed
         self.load_weights()
